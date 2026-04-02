@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lumio — Relatórios</title>
+  <link rel="stylesheet" href="../sass/main.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+<div class="page-wrapper">
+
+  <nav class="navbar">
+    <span class="navbar__logo">Lumio</span>
+    <ul class="navbar__links">
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="transacoes.html">Transações</a></li>
+      <li><a href="assessor.html">Assessor</a></li>
+      <li><a href="relatorios.html" class="active">Relatórios</a></li>
+    </ul>
+    <div class="navbar__avatar">JL</div>
+  </nav>
+
+  <main class="main-content">
+
+    <div class="page-header">
+      <h2 class="page-header__title">Relatórios</h2>
+      <button class="btn btn--primary" onclick="exportarPDF()">
+        Exportar PDF — março/2026
+      </button>
+    </div>
+
+    <!-- COMPARATIVO -->
+    <div class="card" style="margin-bottom:1.25rem;">
+      <div class="card__title">Comparativo de meses</div>
+      <canvas id="chart-comparativo" height="100"></canvas>
+    </div>
+
+    <!-- HISTÓRICO -->
+    <div class="card__title" style="margin-bottom:0.75rem;">Histórico de relatórios</div>
+    <div id="historico"></div>
+
+  </main>
+</div>
+
+<script src="../js/relatorios.js"></script>
+
+</body>
+</html>

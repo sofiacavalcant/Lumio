@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lumio — Dashboard</title>
+  <link rel="stylesheet" href="../sass/main.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+<div class="page-wrapper">
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <span class="navbar__logo">Lumio</span>
+    <ul class="navbar__links">
+      <li><a href="dashboard.html" class="active">Dashboard</a></li>
+      <li><a href="transacoes.html">Transações</a></li>
+      <li><a href="assessor.html">Assessor</a></li>
+      <li><a href="relatorios.html">Relatórios</a></li>
+    </ul>
+    <div class="navbar__avatar" title="Minha conta">JL</div>
+  </nav>
+
+  <main class="main-content">
+
+    <div class="page-header">
+      <h2 class="page-header__title">Olá, João — março de 2026</h2>
+    </div>
+
+    <div class="dashboard">
+
+      <!-- CARDS DE MÉTRICAS -->
+      <div class="grid-3">
+        <div class="metric-card">
+          <div class="metric-card__label">Saldo atual</div>
+          <div class="metric-card__value metric-card__value--receita" id="saldo">R$ 1.240,00</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-card__label">Receitas do mês</div>
+          <div class="metric-card__value" id="receitas">R$ 3.800,00</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-card__label">Despesas do mês</div>
+          <div class="metric-card__value metric-card__value--despesa" id="despesas">R$ 2.560,00</div>
+        </div>
+      </div>
+
+      <!-- GRÁFICOS -->
+      <div class="grid-2">
+        <div class="card">
+          <div class="card__title">Gastos por categoria</div>
+          <canvas id="chart-barras" height="200"></canvas>
+        </div>
+        <div class="card">
+          <div class="card__title">Distribuição (%)</div>
+          <canvas id="chart-pizza" height="200"></canvas>
+        </div>
+      </div>
+
+      <!-- CONSELHO DA IA -->
+      <div class="ia-card">
+        <div class="ia-card__header">Assessor Lumio</div>
+        <div class="ia-card__text" id="ia-conselho">
+          Carregando análise...
+        </div>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<script src="../js/dashboard.js"></script>
+
+</body>
+</html>

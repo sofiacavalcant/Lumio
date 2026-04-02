@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lumio — Assessor</title>
+  <link rel="stylesheet" href="../sass/main.css" />
+</head>
+<body>
+
+<div class="page-wrapper">
+
+  <nav class="navbar">
+    <span class="navbar__logo">Lumio</span>
+    <ul class="navbar__links">
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="transacoes.html">Transações</a></li>
+      <li><a href="assessor.html" class="active">Assessor</a></li>
+      <li><a href="relatorios.html">Relatórios</a></li>
+    </ul>
+    <div class="navbar__avatar">JL</div>
+  </nav>
+
+  <main class="main-content">
+
+    <div class="page-header">
+      <h2 class="page-header__title">Assessor financeiro</h2>
+    </div>
+
+    <div class="chat-layout">
+
+      <!-- SIDEBAR DE ALERTAS -->
+      <div class="chat-layout__sidebar">
+        <h3>Alertas ativos</h3>
+        <div class="alert-card">
+          <div class="alert-card__label">Alimentação</div>
+          Gasto 84% do limite mensal (R$ 1.000)
+        </div>
+        <div class="alert-card">
+          <div class="alert-card__label">Lazer</div>
+          Limite de R$ 300 atingido este mês
+        </div>
+      </div>
+
+      <!-- ÁREA DO CHAT -->
+      <div class="chat-layout__main">
+        <div class="chat">
+          <div class="chat__messages" id="chat-messages">
+            <div style="align-self:flex-start;">
+              <div style="font-size:0.7rem;color:#9B9A94;margin-bottom:3px;">Assessor Lumio</div>
+              <div class="chat__bubble chat__bubble--ia">
+                Olá! Analisei seus dados de março. Você gastou R$ 2.560 até agora,
+                com destaque para alimentação (33% do total). Como posso te ajudar?
+              </div>
+            </div>
+          </div>
+
+          <div class="chat__input-row">
+            <input type="text" id="chat-input" placeholder="Pergunte ao seu assessor..." />
+            <button class="btn btn--primary" onclick="enviarMensagem()">Enviar</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<script src="../js/assessor.js"></script>
+
+</body>
+</html>
