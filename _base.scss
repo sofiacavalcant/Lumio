@@ -1,0 +1,70 @@
+// ===== LUMIO — base & reset =====
+@import 'variables';
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: $font-base;
+  background-color: $bg;
+  color: $text-primary;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+  &:hover { text-decoration: underline; }
+}
+
+button, input, select, textarea {
+  font-family: $font-base;
+  font-size: 0.875rem;
+}
+
+input, select, textarea {
+  outline: none;
+  border: 1px solid $border-strong;
+  border-radius: $radius-md;
+  padding: 0.5rem 0.75rem;
+  background: $surface;
+  color: $text-primary;
+  transition: border-color $transition, box-shadow $transition;
+
+  &:focus {
+    border-color: $primary;
+    box-shadow: 0 0 0 3px rgba($primary, 0.12);
+  }
+}
+
+// ===== UTILITÁRIOS =====
+
+.text-secondary { color: $text-secondary; }
+.text-hint      { color: $text-hint; }
+.text-receita   { color: $receita; }
+.text-despesa   { color: $despesa; }
+.text-primary-color { color: $primary; }
+
+.badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+
+  &--receita  { background: $receita-bg;  color: $receita; }
+  &--despesa  { background: $despesa-bg;  color: $despesa; }
+  &--alerta   { background: $alerta-bg;   color: $alerta;  }
+  &--primary  { background: $primary-light; color: $primary-dark; }
+}

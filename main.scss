@@ -1,0 +1,219 @@
+// ===== LUMIO — main.scss =====
+@import 'variables';
+@import 'base';
+@import 'components';
+
+// ===== LAYOUT GERAL =====
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  padding: 1.5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+
+  &__title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: $text-primary;
+  }
+}
+
+// ===== GRID UTILITÁRIOS =====
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+// ===== DASHBOARD =====
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+// ===== FILTROS =====
+.filters-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+
+  select, input[type="month"] {
+    min-width: 140px;
+  }
+}
+
+// ===== AUTH PAGE =====
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $bg;
+  padding: 1rem;
+}
+
+.auth-card {
+  background: $surface;
+  border: 1px solid $border;
+  border-radius: $radius-xl;
+  padding: 2.5rem 2rem;
+  width: 100%;
+  max-width: 380px;
+
+  &__logo {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    h1 {
+      font-size: 1.75rem;
+      font-weight: 600;
+      color: $primary;
+      letter-spacing: -1px;
+    }
+
+    p {
+      font-size: 0.8rem;
+      color: $text-secondary;
+      margin-top: 2px;
+    }
+  }
+}
+
+// ===== TABS =====
+.tabs {
+  display: flex;
+  border: 1px solid $border-strong;
+  border-radius: $radius-md;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+
+  &__item {
+    flex: 1;
+    padding: 0.5rem;
+    font-size: 0.875rem;
+    text-align: center;
+    cursor: pointer;
+    background: $surface-alt;
+    color: $text-secondary;
+    border: none;
+    transition: all $transition;
+
+    &--active {
+      background: $primary;
+      color: #fff;
+      font-weight: 500;
+    }
+  }
+}
+
+// ===== CHAT LAYOUT =====
+.chat-layout {
+  display: flex;
+  gap: 0;
+  background: $surface;
+  border: 1px solid $border;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  height: 520px;
+
+  &__sidebar {
+    width: 220px;
+    border-right: 1px solid $border;
+    background: $surface-alt;
+    padding: 1rem;
+    flex-shrink: 0;
+    overflow-y: auto;
+
+    h3 {
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: $text-hint;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.75rem;
+    }
+  }
+
+  &__main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+}
+
+// ===== ALERTA SIDEBAR =====
+.alert-card {
+  background: $alerta-bg;
+  border: 1px solid rgba($alerta, 0.3);
+  border-radius: $radius-md;
+  padding: 0.6rem 0.75rem;
+  margin-bottom: 0.6rem;
+  font-size: 0.75rem;
+  color: darken($alerta, 20%);
+  line-height: 1.5;
+
+  &__label {
+    font-weight: 600;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    margin-bottom: 3px;
+    color: $alerta;
+  }
+}
+
+// ===== RELATÓRIOS =====
+.report-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1rem;
+  background: $surface;
+  border: 1px solid $border;
+  border-radius: $radius-md;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  gap: 1rem;
+
+  &__month { font-weight: 500; }
+
+  &__vals {
+    display: flex;
+    gap: 1.25rem;
+    font-size: 0.8rem;
+    color: $text-secondary;
+
+    b { color: $text-primary; font-weight: 500; }
+  }
+}
+
+// ===== RESPONSIVO BÁSICO =====
+@media (max-width: 768px) {
+  .main-content { padding: 1rem; }
+  .grid-3 { grid-template-columns: 1fr; }
+  .grid-2 { grid-template-columns: 1fr; }
+  .navbar__links { display: none; }
+}
