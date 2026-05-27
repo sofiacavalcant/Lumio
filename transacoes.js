@@ -2,7 +2,7 @@
 
 // Dados de exemplo (serão substituídos por fetch('/api/transacoes'))
 let transacoes = [
-  { id: 1, descricao: 'Salário março',  categoria: '—',           tipo: 'receita', valor: 3800, data: '2026-03-01' },
+  { id: 1, descricao: 'Salário ',  categoria: '—',           tipo: 'receita', valor: 3800, data: '2026-03-01' },
   { id: 2, descricao: 'Supermercado',   categoria: 'Alimentação', tipo: 'despesa', valor: 320,  data: '2026-03-05' },
   { id: 3, descricao: 'Uber',           categoria: 'Transporte',  tipo: 'despesa', valor: 47,   data: '2026-03-08' },
   { id: 4, descricao: 'Cinema + jantar',categoria: 'Lazer',       tipo: 'despesa', valor: 130,  data: '2026-03-12' },
