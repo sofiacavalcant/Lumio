@@ -1,6 +1,5 @@
 node_modules/
-public/main.css
-public/main.css.map
 .env
-*.sqlite
-.DS_Store
+lumio.db
+public/
+*.db
